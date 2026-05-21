@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb7e3ac2666eb244a521111f46059e4, type: 3}
   m_Name: ClickerSettings
   m_EditorClassIdentifier: Assembly-CSharp::ClickerSettings
-  <MoneyPerClick>k__BackingField: 1
-  <AutoClickTime>k__BackingField: 3
-  <ClickCost>k__BackingField: 1
+  <StartMoneyAmount>k__BackingField: 10
+  <MoneyPerUpdate>k__BackingField: 1
+  <UpdateInterval>k__BackingField: 3
+  <UpdateCost>k__BackingField: 1
+  <UpdateSound>k__BackingField:
+    <Clip>k__BackingField: {fileID: 8300000, guid: 4e10e387511286c41adaf70d14455904, type: 3}
+    <Volume>k__BackingField: 0.2

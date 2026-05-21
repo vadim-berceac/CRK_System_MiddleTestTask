@@ -77,3 +77,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7945f20dc4eaa5428e28469df52dafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneInstaller
+  audioSourcePrefab: {fileID: 2624069387406234798, guid: dd549a0ed3248b442907fb94edd8b83b, type: 3}
