@@ -5,7 +5,6 @@ using Zenject;
 public class EnergyUpdateService : ITickable, IDisposable, IInitializable
 {
     [Inject] private EnergySettings _energySettings;
-    [Inject] private AudioSource _audioSource;
     private float _lastUpdateTime;
     
     public void Initialize()
@@ -28,8 +27,6 @@ public class EnergyUpdateService : ITickable, IDisposable, IInitializable
         var newValue = Mathf.Min(current + _energySettings.EnergyUpdateAmount, _energySettings.MaxEnergy);
 
         PlayerResourcesService.SetEnergy(newValue);
-            
-        _energySettings.UpdateSound?.Play(_audioSource);
     }
 
 

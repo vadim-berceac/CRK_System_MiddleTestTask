@@ -6,19 +6,21 @@ public static class PlayerResourcesService
 
     private static float _currentMoney = 0;
 
-    public static event Action<float> OnMoneyChanged;
-    public static event Action<float> OnEnergyChanged;
+    public static event Action<float, float> OnMoneyAmountChanged;
+    public static event Action<float, float> OnEnergyAmountChanged;
 
     public static void SetEnergy(float energy)
     {
+        var difference = _currentEnergy - energy;
         _currentEnergy = energy;
-        OnEnergyChanged?.Invoke(_currentEnergy);
+        OnEnergyAmountChanged?.Invoke(_currentEnergy, difference);
     }
 
     public static void SetMoney(float money)
     {
+        var difference = _currentMoney - money;
         _currentMoney = money;
-        OnMoneyChanged?.Invoke(_currentMoney);
+        OnMoneyAmountChanged?.Invoke(_currentMoney, difference);
     }
 
     public static float GetCurrentEnergy()

@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac74ee10f3962845bafac5948d97659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TabButtonScript
+  audioClip:
+    <Clip>k__BackingField: {fileID: 8300000, guid: 26e804bedd099bc43b1696721b9a23cf, type: 3}
+    <Volume>k__BackingField: 0.3
   tabType: 0
 --- !u!1 &2838944205466827754
 GameObject:

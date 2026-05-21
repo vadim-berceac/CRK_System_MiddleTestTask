@@ -46,5 +46,10 @@ public class SceneInstaller : MonoInstaller
             .BindInterfacesAndSelfTo<MoneyUpdateService>()
             .AsSingle()
             .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<InfoSoundService>()
+            .AsSingle()
+            .NonLazy();
     }
 }

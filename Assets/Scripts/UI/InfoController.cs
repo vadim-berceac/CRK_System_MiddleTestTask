@@ -1,3 +1,4 @@
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,27 +14,27 @@ public class InfoController : MonoBehaviour
 
     private void Start()
     {
-        UpdateMoneyText(PlayerResourcesService.GetCurrentMoney());
-        UpdateEnergyText(PlayerResourcesService.GetCurrentEnergy());
+        UpdateMoneyAmountText(PlayerResourcesService.GetCurrentMoney(), 0);
+        UpdateEnergyAmountText(PlayerResourcesService.GetCurrentEnergy(), 0);
         
-        PlayerResourcesService.OnEnergyChanged += UpdateEnergyText;
-        PlayerResourcesService.OnMoneyChanged += UpdateMoneyText;
+        PlayerResourcesService.OnEnergyAmountChanged += UpdateEnergyAmountText;
+        PlayerResourcesService.OnMoneyAmountChanged += UpdateMoneyAmountText;
     }
 
-    private void UpdateMoneyText(float newValue)
+    private void UpdateMoneyAmountText(float newValue, float difference)
     {
-        moneyText.text = newValue.ToString();
+        moneyText.text = newValue.ToString(CultureInfo.InvariantCulture);
     }
 
-    private void UpdateEnergyText(float newValue)
+    private void UpdateEnergyAmountText(float newValue, float difference)
     {
-        energyText.text = newValue.ToString();
+        energyText.text = newValue.ToString(CultureInfo.InvariantCulture);
         energySlider.value = newValue/_energySettings.MaxEnergy;
     }
 
     private void OnDestroy()
     {
-        PlayerResourcesService.OnEnergyChanged -= UpdateEnergyText;
-        PlayerResourcesService.OnMoneyChanged -= UpdateMoneyText;
+        PlayerResourcesService.OnEnergyAmountChanged -= UpdateEnergyAmountText;
+        PlayerResourcesService.OnMoneyAmountChanged -= UpdateMoneyAmountText;
     }
 }

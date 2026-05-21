@@ -5,7 +5,6 @@ using Zenject;
 public class MoneyUpdateService: ITickable, IDisposable, IInitializable
 {
     [Inject] private ClickerSettings _clickerSettings;
-    [Inject] private AudioSource _audioSource;
     private float _lastUpdateTime;
     
     public void Initialize()
@@ -27,8 +26,6 @@ public class MoneyUpdateService: ITickable, IDisposable, IInitializable
             
         var newEnergyValue = PlayerResourcesService.GetCurrentEnergy() - _clickerSettings.UpdateCost;
         PlayerResourcesService.SetEnergy(newEnergyValue);
-
-        _clickerSettings.UpdateSound?.Play(_audioSource);
     }
 
 
