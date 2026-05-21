@@ -12,6 +12,11 @@ public class SceneInstaller : MonoInstaller
             .AsSingle()
             .NonLazy();
         
+        Container
+            .Bind<Canvas>()
+            .FromComponentInHierarchy()
+            .AsSingle()
+            .NonLazy();
         
         Container
             .Bind<ClickerSettings>()
@@ -37,6 +42,12 @@ public class SceneInstaller : MonoInstaller
             .AsSingle()
             .NonLazy();
 
+        Container
+            .Bind<PoolContainer>()
+            .FromScriptableObjectResource("Data/PoolContainer")
+            .AsSingle()
+            .NonLazy();
+        
         Container
             .BindInterfacesAndSelfTo<EnergyUpdateService>()
             .AsSingle()
