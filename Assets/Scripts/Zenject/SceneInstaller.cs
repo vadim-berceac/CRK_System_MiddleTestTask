@@ -19,6 +19,12 @@ public class SceneInstaller : MonoInstaller
             .NonLazy();
         
         Container
+            .Bind<TabController>()
+            .FromComponentInHierarchy()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
             .Bind<ClickerSettings>()
             .FromScriptableObjectResource("Data/ClickerSettings")
             .AsSingle()
@@ -60,6 +66,11 @@ public class SceneInstaller : MonoInstaller
         
         Container
             .BindInterfacesAndSelfTo<InfoSoundService>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<WeatherVisibilityDetector>()
             .AsSingle()
             .NonLazy();
     }

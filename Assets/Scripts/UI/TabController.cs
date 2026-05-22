@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class TabController : MonoBehaviour
     [SerializeField] private TabData[] tabs;
     
     private TabData _currentTab;
+    
+    public event Action<TabTypeEnum> OnTabSelected;
 
     private void Start()
     {
@@ -18,6 +21,7 @@ public class TabController : MonoBehaviour
         switch (tabType)
         {
             case TabTypeEnum.None:
+                SetNewTab(TabTypeEnum.None);
                 HideAll();
                 break;
             
@@ -44,6 +48,7 @@ public class TabController : MonoBehaviour
         _currentTab?.Window.SetActive(false);
         _currentTab = tabs.FirstOrDefault(t => t.TabType == tabType);
         _currentTab?.Window.SetActive(true);
+        OnTabSelected?.Invoke(tabType);
     }
 
     private void HideAll()
