@@ -73,5 +73,25 @@ public class SceneInstaller : MonoInstaller
             .BindInterfacesAndSelfTo<WeatherVisibilityDetector>()
             .AsSingle()
             .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<WeatherPollingScheduler>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<WeatherService>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<WeatherRequestQueue>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<IconLoader>()
+            .AsSingle()
+            .NonLazy();
     }
 }
