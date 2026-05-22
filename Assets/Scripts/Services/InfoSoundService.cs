@@ -28,14 +28,22 @@ public class InfoSoundService : IInitializable, IDisposable
 
     private void OnMoneyAmountIncreased(float newValue, float difference)
     {
-        if(_lastMoneyValue >= newValue) return;
+        if (_lastMoneyValue >= newValue)
+        {
+            _lastMoneyValue = newValue;
+            return;
+        }
         _lastMoneyValue = newValue;
         _clickerSettings.UpdateSound.Play(_audioSource);
     }
 
     private void OnEnergyAmountIncreased(float newValue, float difference)
     {
-        if(_lastEnergyValue >= newValue) return;
+        if (_lastEnergyValue >= newValue)
+        {
+            _lastEnergyValue = newValue;
+            return;
+        }
         _lastEnergyValue = newValue;
         _energySettings.UpdateSound.Play(_audioSource);
     }

@@ -15,4 +15,4 @@ MonoBehaviour:
   pools:
   - <PoolName>k__BackingField: Stars
     prefab: {fileID: 1489431029888112522, guid: 057f2ca7fdda0ad4f94e55a547400022, type: 3}
-    initialPoolSize: 25
+    initialPoolSize: 12

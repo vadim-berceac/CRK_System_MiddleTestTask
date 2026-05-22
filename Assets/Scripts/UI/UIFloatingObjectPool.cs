@@ -15,11 +15,13 @@ public class UIFloatingObjectPool
     public void Initialize(Transform canvas)
     {
         _canvas = canvas;
-        _poolParent = new GameObject(PoolName).transform;
+        _poolParent = new GameObject(PoolName, typeof(RectTransform)).transform;
+        _poolParent.SetParent(_canvas, false);
         
-        _poolParent.SetParent(_canvas);
-        _poolParent.transform.localScale = Vector3.one;
-        _poolParent.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+        var rect = _poolParent as RectTransform;
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = Vector2.zero;
+        rect.localScale = Vector3.one;
         
         for (var i = 0; i < initialPoolSize; i++)
         {

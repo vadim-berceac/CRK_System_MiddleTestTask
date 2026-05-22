@@ -6,6 +6,7 @@ using DG.Tweening;
 public class ClickerButtonScript : MonoBehaviour {
     [SerializeField] private SoundSettings audioClip;
     [SerializeField] private Button clickButton;
+    [SerializeField] private ParticleSystem particle;
     [SerializeField] private float pressDuration = 0.1f;
     
     [Inject] private readonly AudioSource _audioSource;
@@ -34,7 +35,7 @@ public class ClickerButtonScript : MonoBehaviour {
     
     private void OnAutomaticAction(float value, float difference)
     {
-        PlaySound();
+        PlayEffects();
         SimulateButtonPress();
     }
     
@@ -52,15 +53,18 @@ public class ClickerButtonScript : MonoBehaviour {
             });
     }
     
-    private void PlaySound()
+    private void PlayEffects()
     {
         if(audioClip == null || audioClip.Clip == null) return;
         audioClip.Play(_audioSource);
+        
+        if(particle == null) return;
+        particle.Play();
     }
     
     public void OnButtonClick()
     {
-        PlaySound();
+        PlayEffects();
         _moneyUpdateService.UpdateMoneyWithCurrentSettings();
     }
 }

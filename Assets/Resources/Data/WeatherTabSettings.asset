@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4005a2463cefb343ad611319c71860b, type: 3}
   m_Name: WeatherTabSettings
   m_EditorClassIdentifier: Assembly-CSharp::WeatherTabSettings
+  <Address>k__BackingField: https://api.weather.gov/gridpoints/TOP/32,81/forecast
+  <UpdatingInterval>k__BackingField: 5

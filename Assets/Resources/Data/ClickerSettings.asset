@@ -18,4 +18,4 @@ MonoBehaviour:
   <UpdateCost>k__BackingField: 1
   <UpdateSound>k__BackingField:
     <Clip>k__BackingField: {fileID: 8300000, guid: 4e10e387511286c41adaf70d14455904, type: 3}
-    <Volume>k__BackingField: 0.2
+    <Volume>k__BackingField: 0.1
