@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1079.2001
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -249,8 +249,8 @@ MonoBehaviour:
     y: 603.2
     width: 1494.4
     height: 419.99994
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 20}
@@ -279,8 +279,8 @@ MonoBehaviour:
     y: 0
     width: 553.6
     height: 1023.19995
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -711,22 +711,23 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 46874
+      - m_Data: 47978
       m_LastClickedID:
-        m_Data: 0
+        m_Data: 47978
       m_ExpandedIDs:
-      - m_Data: -36606
-      - m_Data: -36580
-      - m_Data: -36560
+      - m_Data: -73642
+      - m_Data: -13420
+      - m_Data: -13400
       - m_Data: -1296
-      - m_Data: 47834
-      - m_Data: 47846
-      - m_Data: 47958
-      - m_Data: 48000
+      - m_Data: 47872
+      - m_Data: 47880
+      - m_Data: 47918
+      - m_Data: 47978
+      - m_Data: 48140
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: LoadingIndicator
+        m_OriginalName: LoadingIndicator
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -734,10 +735,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: 47978
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -821,7 +822,7 @@ MonoBehaviour:
       m_Data: 70040
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
+    - m_Data: 48584
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -854,7 +855,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
+    - m_Data: 48584
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -959,7 +960,7 @@ MonoBehaviour:
     m_CachedPref: 275
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 46874
+  m_LastInspectedObjectInstanceID: 47978
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1077,7 +1078,7 @@ MonoBehaviour:
       m_Data: 47716
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
+    - m_Data: 48584
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1110,7 +1111,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
+    - m_Data: 48584
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1738,9 +1739,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 11.066235, y: 1.3263495, z: 6881.969}
+    m_Target: {x: 1.2044258, y: 0.4829381, z: 113.874504}
     speed: 2
-    m_Value: {x: 11.066235, y: 1.3263495, z: 6881.969}
+    m_Value: {x: 1.2044258, y: 0.4829381, z: 113.874504}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1790,9 +1791,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 41.353058
+    m_Target: 11.411661
     speed: 2
-    m_Value: 41.353058
+    m_Value: 11.411661
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1875,7 +1876,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Data
+    - Assets/Scripts/UI
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1885,25 +1886,24 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/Data
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\CRK_System_MiddleTestTask
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 90.00006}
+    scrollPos: {x: 0, y: 42.00006}
     m_SelectedIDs:
-    - m_Data: 50446
+    - m_Data: 68808
     m_LastClickedID:
-      m_Data: 50446
+      m_Data: 68808
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
-    - m_Data: 48532
-    - m_Data: 48536
-    - m_Data: 48540
-    - m_Data: 57938
+    - m_Data: 48584
+    - m_Data: 51114
+    - m_Data: 51118
+    - m_Data: 51122
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48410
+    - m_Data: 48584
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1965,8 +1965,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 46874
-    m_LastClickedInstanceID: 46874
+    - m_Data: 47978
+    m_LastClickedInstanceID: 47978
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 107562
@@ -2049,10 +2049,11 @@ MonoBehaviour:
     - m_Data: 153970
     - m_Data: 52052
     - m_Data: 81516
+    - m_Data: 67330
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BreedDetailsPopup
-      m_OriginalName: BreedDetailsPopup
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -2060,10 +2061,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 75088
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}
@@ -2211,7 +2212,7 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 46874
+  m_LastSelectedObjectID: 47978
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
