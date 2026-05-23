@@ -25,6 +25,12 @@ public class SceneInstaller : MonoInstaller
             .NonLazy();
         
         Container
+            .Bind<LoadingIndicator>()
+            .FromComponentInHierarchy()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
             .Bind<ClickerSettings>()
             .FromScriptableObjectResource("Data/ClickerSettings")
             .AsSingle()
@@ -75,6 +81,11 @@ public class SceneInstaller : MonoInstaller
             .NonLazy();
         
         Container
+            .BindInterfacesAndSelfTo<BreedsVisibilityDetector>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
             .BindInterfacesAndSelfTo<WeatherPollingScheduler>()
             .AsSingle()
             .NonLazy();
@@ -91,6 +102,21 @@ public class SceneInstaller : MonoInstaller
         
         Container
             .BindInterfacesAndSelfTo<IconLoader>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<DogsService>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<BreedsRequestQueue>()
+            .AsSingle()
+            .NonLazy();
+        
+        Container
+            .BindInterfacesAndSelfTo<BreedsPollingScheduler>()
             .AsSingle()
             .NonLazy();
     }

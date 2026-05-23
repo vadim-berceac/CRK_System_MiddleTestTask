@@ -1,11 +1,19 @@
 using System;
 using Zenject;
 
-public class WeatherVisibilityDetector : IInitializable, IDisposable
+public class WeatherVisibilityDetector : VisibilityDetector
+{
+    protected override TabTypeEnum TabType()
+    {
+        return TabTypeEnum.Weather;
+    }
+}
+
+public abstract class VisibilityDetector : IInitializable, IDisposable
 {
     [Inject] private readonly TabController _tabController;
     
-    public event Action<bool> OnWeatherVisibilityChanged;
+    public event Action<bool> OnTabVisibilityChanged;
     
     public void Initialize()
     {
@@ -19,11 +27,13 @@ public class WeatherVisibilityDetector : IInitializable, IDisposable
 
     private void OnTabSelected(TabTypeEnum tabType)
     {
-        if (tabType != TabTypeEnum.Weather)
+        if (tabType != TabType())
         {
-            OnWeatherVisibilityChanged?.Invoke(false);
+            OnTabVisibilityChanged?.Invoke(false);
             return;
         }
-        OnWeatherVisibilityChanged?.Invoke(true);
+        OnTabVisibilityChanged?.Invoke(true);
     }
+
+    protected abstract TabTypeEnum TabType();
 }

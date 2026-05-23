@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c314b64284c271b4ebb75548aa3f390e, type: 3}
   m_Name: BreedTabSettings
   m_EditorClassIdentifier: Assembly-CSharp::BreedTabSettings
-  <Address>k__BackingField: https://dogapi.dog/docs/api-v2
+  <Address>k__BackingField: https://dogapi.dog/api/v2/breeds

@@ -15,7 +15,7 @@ public class WeatherPollingScheduler : IInitializable, IDisposable
     
     public void Initialize()
     {
-        _visibilityDetector.OnWeatherVisibilityChanged += OnWeatherVisibilityChanged;
+        _visibilityDetector.OnTabVisibilityChanged += OnTabVisibilityChanged;
         _requestQueue.OnRequestDequeued += OnRequestDequeued;
         _weatherService.OnWeatherFetched += OnWeatherFetched;
         _weatherService.OnWeatherError += OnWeatherError;
@@ -23,7 +23,7 @@ public class WeatherPollingScheduler : IInitializable, IDisposable
     
     public void Dispose()
     {
-        _visibilityDetector.OnWeatherVisibilityChanged -= OnWeatherVisibilityChanged;
+        _visibilityDetector.OnTabVisibilityChanged -= OnTabVisibilityChanged;
         _requestQueue.OnRequestDequeued -= OnRequestDequeued;
         _weatherService.OnWeatherFetched -= OnWeatherFetched;
         _weatherService.OnWeatherError -= OnWeatherError;
@@ -31,7 +31,7 @@ public class WeatherPollingScheduler : IInitializable, IDisposable
         StopPolling();
     }
     
-    private void OnWeatherVisibilityChanged(bool isVisible)
+    private void OnTabVisibilityChanged(bool isVisible)
     {
         _isWeatherTabVisible = isVisible;
         
